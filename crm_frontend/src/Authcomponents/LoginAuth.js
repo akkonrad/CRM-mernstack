@@ -13,12 +13,12 @@ function LoginAuth() {
     // function to check credential during submmit click
     function handleLogin(e) {
         e.preventDefault();
-        if (!email || !password || password.length != 8 || !email.includes('@')) {
+        console.log(email);
+        console.log(password);
+        if (!email || !password || password.length <! 8 ||!email.includes('@') ||!email.includes('.') ) {
             alert('Please enter your credentials')
             return;
         }
-        console.log(email);
-        console.log(password);
 
     }
 
@@ -43,7 +43,7 @@ function LoginAuth() {
                     </div>
                     <div className='login-password'>
                         <div>Password</div>
-                        <input type="text" placeholder='User password' onChange={(e) => setPassword(e.target.value)}></input>
+                        <input type="text"  placeholder='User password' onChange={(e) => setPassword(e.target.value)}></input>
                     </div>
                     <div className='login-btn'>
                         <button type='submit' onClick={handleLogin}>Login</button>
