@@ -1,0 +1,16 @@
+.ticket-show{
+    position: relative;
+    width: 100%;
+}
+.form-show{
+    position: absolute;
+    top: 150px;
+
+    height: 200px;
+    width: 200px;
+}
+.form-container{
+    height: 200px;
+    width: 200px;
+    background-color: lightskyblue;
+}
