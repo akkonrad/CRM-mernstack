@@ -32,16 +32,13 @@ html,body,#root,.App{
     font-family: sans-serif;
     margin-left: 10px;
 }
-.table-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .table{
-    margin-left: 10px;
+    margin-left: 3px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    
 }
 .table table tr{
     margin: 10px;

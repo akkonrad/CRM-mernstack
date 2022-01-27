@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Form from './Form';
 
 function AddTicket() {
-    const [showTicket, setshowTicket] = useState(true);
+    const [showTicket, setshowTicket] = useState(false);
     //jab true ho to ticket show hojaye mtlb form;
     function handleForm() {
         // setshowTicket(Form)
@@ -13,7 +13,7 @@ function AddTicket() {
 
     return (
         <div className='ticket-show'>
-            <div onClick={handleForm}>Add Ticket</div>
+            <button onClick={handleForm}>Add Ticket</button>
             <div className='form-show'>
                 {showTicket ? <Form /> : ''}
             </div>

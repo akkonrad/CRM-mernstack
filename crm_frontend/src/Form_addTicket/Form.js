@@ -11,7 +11,7 @@ function Form() {
                 <input type="text" id="status"  /><br/>
                 <label for="lname">Enter your Opened Date:</label><br />
                 <input type="text" id="status" /><br />
-                <button>Submit Form</button>
+                <button type='submit'>Submit Form</button>
                 
             </form>
         </div>
