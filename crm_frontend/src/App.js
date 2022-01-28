@@ -5,11 +5,13 @@ import LoginAuth from './Authcomponents/LoginAuth';
 import Header from './DefaultLayout/Header';
 import Footer from './DefaultLayout/Footer';
 import Dashboard from './DefaultLayout/Dashboard';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Contextwrapper from './context/ContextWrapper';
 
 
 function App() {
   return (
+    <Contextwrapper>
     <BrowserRouter>
       <div className="App">
           <Header />
@@ -20,7 +22,8 @@ function App() {
         </Routes>
           <Footer />
       </div>
-    </BrowserRouter>
+      </BrowserRouter>
+      </Contextwrapper>
   );
 }
 

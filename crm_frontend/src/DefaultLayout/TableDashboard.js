@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext,useEffect,useState } from 'react'
 
-function TableDashboard({tickets}) {
-    console.log(tickets.length);
+
+function TableDashboard({ form}) {
+    console.log(form,"this is the form");
+    
+   
     return (
         <div className='table'>
             <table>
@@ -9,18 +12,19 @@ function TableDashboard({tickets}) {
                     <tr>
                         <th>Subject</th>
                         <th>Status</th>
-                        <th>Opened Date</th>
+                        <th>Opened Date</th> 
                     </tr>
                 </thead>
 
-                {tickets.length ?
-                    tickets.map((ele, id) => {
+                {form.length ?
+                    form.map((ele, id) => {
+                        console.log(ele);
                         return (
                             <tbody key={id}>
                                 <tr >
-                                    <td>{ele.Subject}</td>
-                                    <td>{ele.Status}</td>
-                                    <td>{ele.Date}</td>
+                                    <td>{ele.subject}</td>
+                                    <td>{ele.status}</td>
+                                    <td>{ele.date}</td>
                                 </tr>
                             </tbody>
                         )
@@ -28,7 +32,7 @@ function TableDashboard({tickets}) {
                     : (
                         <tbody>
                             <tr>
-                                no action on tickets
+                               <td>no action needed</td>
                             </tr>
                         </tbody>
                     )
