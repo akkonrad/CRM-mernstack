@@ -4,7 +4,14 @@ import React, { useContext,useEffect,useState } from 'react'
 function TableDashboard({ form}) {
     console.log(form,"this is the form");
     
-   
+    const [validate, setValidate] = useState(false);
+    // form.map((ele) => {
+    //     if (ele.subject.length < 5) {
+    //         setValidate(false)
+    //     } else {
+    //         setValidate(true)
+    //     }
+    // })
     return (
         <div className='table'>
             <table>
@@ -18,6 +25,7 @@ function TableDashboard({ form}) {
 
                 {form.length ?
                     form.map((ele, id) => {
+                       
                         console.log(ele);
                         return (
                             <tbody key={id}>

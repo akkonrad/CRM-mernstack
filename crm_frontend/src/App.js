@@ -7,6 +7,7 @@ import Footer from './DefaultLayout/Footer';
 import Dashboard from './DefaultLayout/Dashboard';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Contextwrapper from './context/ContextWrapper';
+import Ticketland from './Ticket Landing page/TicketLand';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Routes>
           <Route path='/' element={<LoginAuth/>}/>
           <Route path='/dashboard' element={<Dashboard />}/>
-          {/* <LoginAuth /> */}
+          <Route path='/TicketLanding' element={<Ticketland/>} />
         </Routes>
           <Footer />
       </div>

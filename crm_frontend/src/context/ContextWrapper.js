@@ -16,6 +16,7 @@ const Contextwrapper = ({ children }) => {
         e.preventDefault();
         let { name, value } = e.target;
         if (name == 'subject') {
+          
             setData(value);
            
         
@@ -30,8 +31,18 @@ const Contextwrapper = ({ children }) => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        setform([...form, { subject: data, status: status, date: date }])
+        if (data.length < 5 || !data ||!status || !date) {
+            setValidate(false)
+            alert("inputs are not valid")
+            return;
+        }
+        
+        if (!validate) {
+            
+            setform([...form, { subject: data, status: status, date: date }])
+        }
+            
+        
       
         
             

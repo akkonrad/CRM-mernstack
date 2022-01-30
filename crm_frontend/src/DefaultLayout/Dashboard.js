@@ -1,4 +1,5 @@
-import React, {useContext }from 'react'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import './Dashboard.css'
 import TableDashboard from './TableDashboard'
 import Object from '../Data/Object'
@@ -13,19 +14,22 @@ function Dashboard() {
         <>
             <div className='dashboard-container'>
                 <div className='add-ticket'>
-                    <AddTicket/>
+                    <AddTicket />
                 </div>
                 <div>Total tickets:{form.length}</div>
                 <div>Pending tickets:7</div>
 
             </div>
-            <div className='table-header'>My Recently Added Tickets</div>
+            <Link to="/TicketLanding">
+                <div className='table-header'>Show Added Tickets</div>
+            </Link>
             <div className='table-container'>
 
                 {/* table dahsboard  here --we can pass data to table from here */}
-                <TableDashboard form={form}/>
 
-                
+                <Link to="/TicketLanding"></Link> <TableDashboard form={form} />
+
+
             </div>
         </>
     )
