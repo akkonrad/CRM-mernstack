@@ -15,7 +15,7 @@ const Object = [
         Date:"22-10-2012"
     },
     {
-        Subject: "porblem with system",
+        Subject: "problem with system",
         Status: "not opened",
         Date:"22-10-2012"
     },
